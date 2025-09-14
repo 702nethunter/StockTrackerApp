@@ -43,3 +43,58 @@
 2025-09-14 04:38:24.988 +00:00 [INF] Content root path: /home/narendracool/dotnet/StockTrackerApp/StockTracker.Server
 2025-09-14 04:38:26.537 +00:00 [INF] Application is shutting down...
 2025-09-14 04:38:26.545 +00:00 [INF] Background Service is stopping
+2025-09-14 05:52:00.335 +00:00 [WRN] The ASP.NET Core developer certificate is only trusted by some clients. For information about trusting the ASP.NET Core developer certificate, see https://aka.ms/aspnet/https-trust-dev-cert
+2025-09-14 05:52:00.448 +00:00 [INF] Start processing HTTP request GET https://www.nasdaqtrader.com/dynamic/SymDir/nasdaqlisted.txt
+2025-09-14 05:52:00.452 +00:00 [INF] Sending HTTP request GET https://www.nasdaqtrader.com/dynamic/SymDir/nasdaqlisted.txt
+2025-09-14 05:52:01.312 +00:00 [INF] Received HTTP response headers after 857.1959ms - 200
+2025-09-14 05:52:01.327 +00:00 [INF] End processing HTTP request after 881.6575ms - 200
+2025-09-14 05:52:01.597 +00:00 [INF] Parsed 1000 symbols from NASDAQ listed file.
+2025-09-14 05:52:01.633 +00:00 [INF] Fetched and cached 1000 symbols.
+2025-09-14 05:52:01.655 +00:00 [INF] Now listening on: https://localhost:5003
+2025-09-14 05:52:01.655 +00:00 [INF] Now listening on: http://localhost:5000
+2025-09-14 05:52:01.656 +00:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-09-14 05:52:01.656 +00:00 [INF] Hosting environment: Development
+2025-09-14 05:52:01.656 +00:00 [INF] Content root path: /home/narendracool/dotnet/StockTrackerApp/StockTracker.Server
+2025-09-14 05:52:06.423 +00:00 [INF] Application is shutting down...
+2025-09-14 05:52:06.431 +00:00 [INF] Background Service is stopping
+2025-09-14 05:52:08.826 +00:00 [WRN] The ASP.NET Core developer certificate is only trusted by some clients. For information about trusting the ASP.NET Core developer certificate, see https://aka.ms/aspnet/https-trust-dev-cert
+2025-09-14 05:52:08.939 +00:00 [ERR] Hosting failed to start
+System.Text.Json.JsonException: The JSON value could not be converted to System.String. Path: $[0] | LineNumber: 0 | BytePositionInLine: 2.
+ ---> System.InvalidOperationException: Cannot get the value of a token type 'StartObject' as a string.
+   at System.Text.Json.ThrowHelper.ThrowInvalidOperationException_ExpectedString(JsonTokenType tokenType)
+   at System.Text.Json.Utf8JsonReader.GetString()
+   at System.Text.Json.Serialization.JsonCollectionConverter`2.OnTryRead(Utf8JsonReader& reader, Type typeToConvert, JsonSerializerOptions options, ReadStack& state, TCollection& value)
+   at System.Text.Json.Serialization.JsonConverter`1.TryRead(Utf8JsonReader& reader, Type typeToConvert, JsonSerializerOptions options, ReadStack& state, T& value, Boolean& isPopulatedValue)
+   at System.Text.Json.Serialization.JsonConverter`1.ReadCore(Utf8JsonReader& reader, T& value, JsonSerializerOptions options, ReadStack& state)
+   --- End of inner exception stack trace ---
+   at System.Text.Json.ThrowHelper.ReThrowWithPath(ReadStack& state, Utf8JsonReader& reader, Exception ex)
+   at System.Text.Json.Serialization.JsonConverter`1.ReadCore(Utf8JsonReader& reader, T& value, JsonSerializerOptions options, ReadStack& state)
+   at System.Text.Json.Serialization.Metadata.JsonTypeInfo`1.Deserialize(Utf8JsonReader& reader, ReadStack& state)
+   at System.Text.Json.JsonSerializer.ReadFromSpan[TValue](ReadOnlySpan`1 utf8Json, JsonTypeInfo`1 jsonTypeInfo, Nullable`1 actualByteCount)
+   at System.Text.Json.JsonSerializer.ReadFromSpan[TValue](ReadOnlySpan`1 json, JsonTypeInfo`1 jsonTypeInfo)
+   at StockBootStrapper.StartAsync(CancellationToken ct) in /home/narendracool/dotnet/StockTrackerApp/StockTracker.Server/Services/StockBootStrapper.cs:line 29
+   at Microsoft.Extensions.Hosting.Internal.Host.<StartAsync>b__14_1(IHostedService service, CancellationToken token)
+   at Microsoft.Extensions.Hosting.Internal.Host.ForeachService[T](IEnumerable`1 services, CancellationToken token, Boolean concurrent, Boolean abortOnFirstException, List`1 exceptions, Func`3 operation)
+2025-09-14 06:09:01.617 +00:00 [WRN] The ASP.NET Core developer certificate is only trusted by some clients. For information about trusting the ASP.NET Core developer certificate, see https://aka.ms/aspnet/https-trust-dev-cert
+2025-09-14 06:09:01.726 +00:00 [INF] Start processing HTTP request GET https://www.nasdaqtrader.com/dynamic/SymDir/nasdaqlisted.txt
+2025-09-14 06:09:01.729 +00:00 [INF] Sending HTTP request GET https://www.nasdaqtrader.com/dynamic/SymDir/nasdaqlisted.txt
+2025-09-14 06:09:02.074 +00:00 [INF] Received HTTP response headers after 341.9038ms - 200
+2025-09-14 06:09:02.091 +00:00 [INF] End processing HTTP request after 367.6721ms - 200
+2025-09-14 06:09:02.486 +00:00 [INF] Parsed 1000 symbols from NASDAQ listed file.
+2025-09-14 06:09:02.512 +00:00 [INF] Fetched and cached 1000 symbols.
+2025-09-14 06:09:02.536 +00:00 [INF] Now listening on: https://localhost:5003
+2025-09-14 06:09:02.536 +00:00 [INF] Now listening on: http://localhost:5000
+2025-09-14 06:09:02.537 +00:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-09-14 06:09:02.537 +00:00 [INF] Hosting environment: Development
+2025-09-14 06:09:02.537 +00:00 [INF] Content root path: /home/narendracool/dotnet/StockTrackerApp/StockTracker.Server
+2025-09-14 06:09:04.528 +00:00 [INF] Application is shutting down...
+2025-09-14 06:09:04.536 +00:00 [INF] Background Service is stopping
+2025-09-14 06:09:07.451 +00:00 [WRN] The ASP.NET Core developer certificate is only trusted by some clients. For information about trusting the ASP.NET Core developer certificate, see https://aka.ms/aspnet/https-trust-dev-cert
+2025-09-14 06:09:07.581 +00:00 [INF] Loaded 1000 symbols from Redis.
+2025-09-14 06:09:07.602 +00:00 [INF] Now listening on: https://localhost:5003
+2025-09-14 06:09:07.603 +00:00 [INF] Now listening on: http://localhost:5000
+2025-09-14 06:09:07.603 +00:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-09-14 06:09:07.603 +00:00 [INF] Hosting environment: Development
+2025-09-14 06:09:07.603 +00:00 [INF] Content root path: /home/narendracool/dotnet/StockTrackerApp/StockTracker.Server
+2025-09-14 06:09:13.631 +00:00 [INF] Application is shutting down...
+2025-09-14 06:09:13.637 +00:00 [INF] Background Service is stopping

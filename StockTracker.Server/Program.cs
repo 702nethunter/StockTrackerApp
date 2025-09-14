@@ -3,6 +3,9 @@ using Microsoft.AspNetCore.Server.Kestrel.Core;
 using Serilog;
 using Microsoft.AspNetCore.Builder;  
 using Microsoft.AspNetCore.Hosting;
+using StackExchange.Redis;
+using Microsoft.Extensions.Hosting;
+using Microsoft.Extensions.Logging;
 
 Log.Logger = new LoggerConfiguration()
     .Enrich.FromLogContext()
@@ -12,6 +15,10 @@ Log.Logger = new LoggerConfiguration()
 
 var builder = WebApplication.CreateBuilder(args);
 builder.Host.UseSerilog();
+
+// Redis connection (e.g., localhost:6379 or your container hostname)
+builder.Services.AddSingleton<IConnectionMultiplexer>(sp =>
+    ConnectionMultiplexer.Connect(builder.Configuration.GetConnectionString("Redis") ?? "localhost:6379"));
 builder.Services.AddHttpClient<NasdaqListedParser>();
 builder.Services.AddHostedService<StockBootStrapper>();
 // HTTP/2 for gRPC (dev: cleartext; prod: use HTTPS)

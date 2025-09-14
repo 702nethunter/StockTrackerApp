@@ -155,3 +155,6 @@
 /home/narendracool/dotnet/StockTrackerApp/StockTracker.Server/obj/Debug/net9.0/StockTracker.Server.pdb
 /home/narendracool/dotnet/StockTrackerApp/StockTracker.Server/obj/Debug/net9.0/StockTracker.Server.genruntimeconfig.cache
 /home/narendracool/dotnet/StockTrackerApp/StockTracker.Server/obj/Debug/net9.0/ref/StockTracker.Server.dll
+/home/narendracool/dotnet/StockTrackerApp/StockTracker.Server/obj/Debug/net9.0/StockTracker.Server.sourcelink.json
+/home/narendracool/dotnet/StockTrackerApp/StockTracker.Server/bin/Debug/net9.0/Pipelines.Sockets.Unofficial.dll
+/home/narendracool/dotnet/StockTrackerApp/StockTracker.Server/bin/Debug/net9.0/StackExchange.Redis.dll
