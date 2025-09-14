@@ -1,0 +1,1 @@
+public record StockSymbolName(string symbol,string Name);
