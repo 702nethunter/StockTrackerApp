@@ -1,0 +1,3 @@
+obj/Debug/net9.0/Protos/Stocktracker.cs \
+obj/Debug/net9.0/Protos/StocktrackerGrpc.cs: /home/narendracool/.nuget/packages/grpc.tools/2.71.0/build/native/include/google/protobuf/timestamp.proto\
+ Protos/stocktracker.proto
