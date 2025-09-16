@@ -6,6 +6,7 @@ using Microsoft.AspNetCore.Hosting;
 using StackExchange.Redis;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
+using StockTracker.Services;
 
 Log.Logger = new LoggerConfiguration()
     .Enrich.FromLogContext()
@@ -21,6 +22,8 @@ builder.Services.AddSingleton<IConnectionMultiplexer>(sp =>
     ConnectionMultiplexer.Connect(builder.Configuration.GetConnectionString("Redis") ?? "localhost:6379"));
 builder.Services.AddHttpClient<NasdaqListedParser>();
 builder.Services.AddHostedService<StockBootStrapper>();
+builder.Services.AddSingleton<IQuoteProvider,FinnhubQuoteProvider>();
+builder.Services.AddSingleton<ServiceHandler>();
 // HTTP/2 for gRPC (dev: cleartext; prod: use HTTPS)
 builder.WebHost.ConfigureKestrel(options =>
 {
